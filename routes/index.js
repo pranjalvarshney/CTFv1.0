@@ -11,5 +11,10 @@ router.get('/dashboard', ensureAuthenticated, (req, res) =>
     user: req.user
   })
 );
-
+router.get('/pointstable', ensureAuthenticated, (req, res) =>
+  res.render('pointstable')
+);
+router.get('/problems', ensureAuthenticated, (req, res) =>
+  res.render('problems')
+);
 module.exports = router;

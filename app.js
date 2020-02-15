@@ -44,7 +44,6 @@ app.use((req,res,next)=>{
 	res.locals.success_msg = req.flash('success_msg');
 	res.locals.error_msg = req.flash('error_msg');	
 	res.locals.error = req.flash('error');
-
 	next();
 });
 
@@ -52,7 +51,7 @@ app.use((req,res,next)=>{
 app.use('/',require('./routes/index'));
 // Users route
 app.use('/user',require('./routes/user'));
-
+app.use('/problems',require('./routes/problem'));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,console.log('Server started on ' + PORT));
