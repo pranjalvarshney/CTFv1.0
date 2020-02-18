@@ -14,6 +14,14 @@ router.get('/dashboard', ensureAuthenticated, (req, res) =>
 router.get('/pointstable', ensureAuthenticated, (req, res) =>
   res.render('pointstable')
 );
+router.get('/profile', ensureAuthenticated, (req, res) =>
+  res.render('profile',{
+    user: req.user
+  })
+);
+router.get('/rules', ensureAuthenticated, (req, res) =>
+  res.render('rules')
+);
 router.get('/problems', ensureAuthenticated, (req, res) =>
   res.render('problems')
 );

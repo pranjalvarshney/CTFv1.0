@@ -84,6 +84,16 @@ router.get('/pointstable',function(req,res,next){
   res.render('pointstable');
 });
 
+//Rules page 
+router.get('/rules',function(req,res,next){
+  res.render('rules');
+});
+
+//Profile page 
+router.get('/profile',function(req,res,next){
+  res.render('profile');
+});
+
 
 // Logout
 router.get('/logout', (req, res) => {

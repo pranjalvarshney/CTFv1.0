@@ -8,10 +8,62 @@
     position: absolute;
     margin: 0;
     padding: 0;
-    top: 50%;
+    top: 30%;
     left: 50%;
+    top: 50%;
     -webkit-transform: translate3d(-50%, -50%, 0);
     transform: translate3d(-50%, -50%, 0);
  }
  
+ .wrapper {
+   position: relative;
+   display: inline-block;
+   margin: auto;
+ }
  
+ .header-wrap {
+   display: block;
+   width: auto;
+   height: auto;
+   padding: 0;
+   size: 40px;
+   text-align: center;
+   font-size: 80px !important;
+   transform: perspective(250px) rotateX(15deg);
+   letter-spacing: 0.1em;
+   user-select: none;
+   text-shadow: 0 -1px 0 #fff, 0 1px 0 #004d40, 0 2px 0 #00483b, 0 3px 0 #004639, 0 4px 0 #004336, 0 5px 0 #004134, 0 6px 0 #003f32, 0 7px 0 #003d30, 0 8px 0 #003a2d, 0 9px 0 #00382b, 0 10px 0 #003528, 0 11px 0 #003225, 0 12px 0 #002f22, 0 13px 0 #002b1e, 0 14px 0 #00281c, 0 15px 0 #001f13, 0 22px 30px rgba(0, 0, 0, 0.9), 0 22px 30px rgba(0, 0, 0, 0.9), 0 22px 15px rgba(0, 0, 0, 0.9), 0 11px 15px rgba(0, 0, 0, 0.9), 0 15px 20px rgba(0, 0, 0, 0.9), 0 15px 11px rgba(0, 0, 0, 0.9), 0 16px 11px rgba(0, 0, 0, 0.9);
+   transition: text-shadow 0.3s ease 0.3s, transform 0.3s ease 0.3s, letter-spacing 0.3s ease 0.3s;
+ }
+ .header-wrap:hover {
+   transition: text-shadow 0.33s ease, transform 0.3s ease, letter-spacing 0.3s ease;
+   text-shadow: 0 0 0 #004134, 0 1px 0 #00483b, 0 2px 0 #003528, 0 3px 3px rgba(0, 0, 0, 0.9);
+   transform: translate(0px, 15px) perspective(200px) rotateX(10deg);
+   letter-spacing: 0.125em;
+ }
+ 
+ 
+ #timer-css2{
+    border: 1px solid white;
+    color: white;
+ }
+
+
+ .loader-button {
+   color: wheat;
+   align-content: center;
+   padding-left: 200px;
+   padding-right: 200px;
+   padding-top: 5%;
+   padding-bottom: 5%;
+   font-size: 100px;
+   margin:auto !important;
+   border: 3px solid wheat;
+   align-items: center;
+   background-color: #00000000;
+   text-decoration: none;
+ }
+ #levels-text{
+   border-bottom: 3px solid orange;
+   padding-bottom: 7px;
+ }
