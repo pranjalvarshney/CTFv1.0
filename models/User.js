@@ -17,6 +17,10 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    timer:{
+        type: Number,
+        default: 150
+    },
     points: {
         type: Number,
         default: 0

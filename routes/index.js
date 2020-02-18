@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const allusers = require('../models/User');
 const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 
 // Welcome Page
@@ -11,9 +12,17 @@ router.get('/dashboard', ensureAuthenticated, (req, res) =>
     user: req.user
   })
 );
-router.get('/pointstable', ensureAuthenticated, (req, res) =>
-  res.render('pointstable')
-);
+router.get('/pointstable', ensureAuthenticated, (req, res) =>{
+        allusers.find({},(err,users)=>{
+          if(users){
+            res.render('pointstable',{users});
+          }
+          else{
+            console.log(err);
+          }
+        })
+    
+});
 router.get('/profile', ensureAuthenticated, (req, res) =>
   res.render('profile',{
     user: req.user

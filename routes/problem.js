@@ -10,7 +10,4 @@ router.get('/pikachu3', ensureAuthenticated, (req, res) => res.render('pikachu3'
 router.get('/pikachu4', ensureAuthenticated, (req, res) => res.render('pikachu4'));
 router.get('/pikachu5', ensureAuthenticated, (req, res) => res.render('pikachu5'));
 router.get('/pikachu6', ensureAuthenticated, (req, res) => res.render('pikachu6'));
-router.get('/pikachu7', ensureAuthenticated, (req, res) => res.render('pikachu7'));
-router.get('/pikachu8', ensureAuthenticated, (req, res) => res.render('pikachu8'));
-router.get('/pikachu9', ensureAuthenticated, (req, res) => res.render('pikachu9'));
 module.exports = router;
