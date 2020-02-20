@@ -17,9 +17,35 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    levelStatus:{
-        type:Array,
-        default:['false','false','false','false','false','false']
+    level0:
+    {
+        type: Boolean,
+        default:false
+    },
+     level1:
+    {
+        type: Boolean,
+        default:false
+    },
+     level2:
+    {
+        type: Boolean,
+        default:false
+    },
+     level3:
+    {
+        type: Boolean,
+        default:false
+    },
+     level4:
+    {
+        type: Boolean,
+        default:false
+    },
+     level5:
+    {
+        type: Boolean,
+        default:false
     },
     points: {
         type: Number,

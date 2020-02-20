@@ -5,8 +5,10 @@ const bodyParser = require('body-parser');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
+var Stopwatch = require('timer-stopwatch');
 
 const app = express();
+
 
 require('./config/passport')(passport);
 
