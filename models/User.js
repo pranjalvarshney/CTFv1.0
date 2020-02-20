@@ -17,9 +17,9 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    timer:{
-        type: Number,
-        default: 150
+    levelStatus:{
+        type:Array,
+        default:['false','false','false','false','false','false']
     },
     points: {
         type: Number,
