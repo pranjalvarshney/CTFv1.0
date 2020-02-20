@@ -51,6 +51,10 @@ const UserSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
+    time:{
+        type:Number,
+        default:9000000
+    },
     date: {
         type: Date,
         default: Date.now

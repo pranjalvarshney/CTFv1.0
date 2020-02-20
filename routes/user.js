@@ -74,10 +74,12 @@ router.post('/login', (req, res, next) => {
   })(req, res, next);
 });
 
-// Start
-router.get('/problems',function(req,res){
-  res.render('problems');
-});
+// // Start
+// router.get('/problems',function(req,res){
+//   console.log('hi');
+//   res.render('problems');
+
+// });
 
 //Points Table 
 router.get('/pointstable',function(req,res,next){
