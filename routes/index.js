@@ -49,6 +49,9 @@ router.get('/problems', ensureAuthenticated, (req, res) =>{
 
   var timer = new Stopwatch(req.user.time,options);
     timer.start();
+    if(req.user.timer == 0){
+      timer.stop();
+    }
     timer.onTime(function(time){
       update_timer(time.ms)
   })
