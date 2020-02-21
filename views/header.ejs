@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-lg  navbar-dark text-white mb-3" id="nav-css">
+<nav class="navbar navbar-expand-lg  navbar-dark text-white py-3" id="nav-css">
   <div class="clock "></div>
 
-  <div class="container-fluid">
-      <h5  class="nav-brand" id="time-display">Time left: <%= user.time/60000 %></h5>
+  <div class="container">
+      <h4  class="nav-brand" id="time-display">Time left: <%= user.time/60000 %></h4>
       
       <div id="navbarText" class="mr-3">
         <ul class="navbar-nav ">
@@ -21,7 +21,15 @@
           <li class="nav-item">
             <a class="nav-link" href="/user/logout">Logout</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" id="text" href="">time</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <script>
+    var x = '<%= user.time/60000 %>';
+    document.getElementById('text').value = x;
+  </script>

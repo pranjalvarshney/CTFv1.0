@@ -1,8 +1,8 @@
 <% include header%>
-<div class="container text-white mb-5">
-  <h1 class="float-right" id="levels-text">Points Table</h1>
+<div class="container text-white my-5">
+  <h1 class="" id="levels-text">Points Table</h1>
 </div>
-<table class="table border-0  text-white" border="1">
+<table class="table border-0 text-white" border="1">
     <thead>
       <b>
         <tr>
@@ -15,14 +15,13 @@
     </thead>
     <tbody>
 
-<% users.forEach((user)=>{%>
-
+<% for(var i=0; i<users.length ; i++) { %>
       <tr>
-        <th scope="row">1</th>
-        <td><%= user.name%></td>
-        <td><%= user.rollno%></td>
-        <td><%= user.points%></td>
+        <th><%= i+1 %></th>
+        <td><%= users[i].name%></td>
+        <td><%= users[i].rollno%></td>
+        <td><%= users[i].points%></td>
       </tr>
-   <% })%>      
+<% }%>
     </tbody>
   </table>

@@ -21,7 +21,7 @@ router.get('/pointstable', ensureAuthenticated, (req, res) =>{
           else{
             console.log(err);
           }
-        })
+        }).sort({points:'desc'})
     
 });
 router.get('/profile', ensureAuthenticated, (req, res) =>
