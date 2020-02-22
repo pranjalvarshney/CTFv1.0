@@ -34,6 +34,22 @@ router.get('/rules', ensureAuthenticated, (req, res) =>
     {user: req.user})
 );
 
+router.get('/success', ensureAuthenticated, (req, res) =>
+  res.render('success',
+    {user: req.user})
+);
+
+router.get('/solved', ensureAuthenticated, (req, res) =>
+  res.render('solved',
+    {user: req.user})
+);
+
+router.get('/retry', ensureAuthenticated, (req, res) =>
+  res.render('retry',
+    {user: req.user})
+);
+
+
 
 router.get('/problems', ensureAuthenticated, (req, res) =>{
   console.log('hi there')
