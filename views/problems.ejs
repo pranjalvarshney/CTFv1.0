@@ -3,23 +3,23 @@
     <h1 class="float-right" id="levels-text">Levels</h1>
 </div>
 <br>
-<div class="container text-white my-3">
+<div class="container text-white my-3" onload="functionColor()">
 
     <div class="row my-3">
         <h2>Easy</h2>
     </div>
     <div class="row my-3">
         <div class="col-2">
-            <a href="/problems/pikachu0" class="btn btn-secondary px-5 py-2 text-white">Level 0</a>
+            <a href="/problems/pikachu0" class="btn btn-secondary px-5 py-2 text-white" id="btn0">Level 0</a>
         </div>
         <div class="col-2">
-            <a href="/problems/pikachu1" class="btn btn-secondary px-5 py-2 text-white">Level 1</a>
+            <a href="/problems/pikachu1" class="btn btn-secondary px-5 py-2 text-white" id="btn1">Level 1</a>
         </div>     
         <div class="col-2">
-            <a href="/problems/pikachu2" class="btn btn-secondary px-5 py-2 text-white">Level 2</a>
+            <a href="/problems/pikachu2" class="btn btn-secondary px-5 py-2 text-white" id="btn2">Level 2</a>
         </div>  
         <div class="col-2">
-            <a href="/problems/pikachu3" class="btn btn-secondary px-5 py-2 text-white">Level 3</a>
+            <a href="/problems/pikachu3" class="btn btn-secondary px-5 py-2 text-white" id="btn3">Level 3</a>
         </div>
     </div>
     <div class="row my-3">
@@ -27,10 +27,10 @@
     </div>
     <div class="row my-3">
         <div class="col-2">
-            <a href="/problems/pikachu4" class="btn btn-secondary px-5 py-2 text-white">Level 4</a>
+            <a href="/problems/pikachu4" class="btn btn-secondary px-5 py-2 text-white" id="btn4">Level 4</a>
         </div>
         <div class="col-2">
-            <a href="/problems/pikachu5" class="btn btn-secondary px-5 py-2 text-white">Level 5</a>
+            <a href="/problems/pikachu5" class="btn btn-secondary px-5 py-2 text-white" id="btn5">Level 5</a>
         </div>  
     </div>
     <div class="row my-3">
@@ -38,8 +38,25 @@
     </div>
     <div class="row my-3">
         <div class="col-2">
-            <a href="/problems/pikachu7" class="btn btn-secondary px-5 py-2 text-white">Level 6</a>
+            <a href="/problems/pikachu7" class="btn btn-secondary px-5 py-2 text-white" id="btn6">Level 6</a>
         </div>     
     </div>
 
 </div>
+
+<script>
+    var l0= '<%= user.level0 %>';
+    var l1= '<%= user.level1 %>';
+    var l2= '<%= user.level2 %>';
+    var l3= '<%= user.level3 %>';
+    var l4= '<%= user.level4 %>';
+    var l5= '<%= user.level5 %>';
+    var l6= '<%= user.level6 %>';
+
+    
+    var i = '<%= user.level0 %>';
+        if(i){
+            document.getElementById('btn0').style.color= 'green';
+        }
+    
+</script>

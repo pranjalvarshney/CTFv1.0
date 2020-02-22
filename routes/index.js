@@ -44,7 +44,6 @@ router.get('/problems', ensureAuthenticated, (req, res) =>{
   function update_timer(time){
   req.user.time=time;
   req.user.save();
-  console.log(req.user);
 }
 
   var timer = new Stopwatch(req.user.time,options);

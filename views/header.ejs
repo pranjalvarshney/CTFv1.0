@@ -1,16 +1,22 @@
 <nav class="navbar navbar-expand-lg  navbar-dark text-white py-3" id="nav-css">
-  <div class="clock "></div>
 
-  <div class="container">
-      <h4  class="nav-brand" id="time-display">Time left: <%= user.time/60000 %></h4>
+
+  <div class="container-fluid">
+      <h2  class="nav-brand" id="time-display">CTF v1.0</h2>
       
-      <div id="navbarText" class="mr-3">
+      <div id="navbarText" class="">
         <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link text-warning disabled my-auto" href=""><i class="fa fa-2x fa-hourglass-half my-auto " id="fa-id"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-warning disabled my-auto" href=""><b id="text"><%= user.time%></b></a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="/dashboard">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pointstable">Points Table</a>
+            <a class="nav-link" href="/pointstable">Score Board</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/rules">Rules</a>
@@ -21,15 +27,34 @@
           <li class="nav-item">
             <a class="nav-link" href="/user/logout">Logout</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" id="text" href="">time</a>
-          </li>
+          
         </ul>
       </div>
     </div>
   </nav>
 
   <script>
-    var x = '<%= user.time/60000 %>';
-    document.getElementById('text').value = x;
+    var x = '<%= user.time%>';
+    x = x /1000;
+    setInterval(()=>{
+
+      x = x - 1;
+
+      h = Math.floor( (x/ (60*60) ));
+      m = Math.floor( (x % 3600) / 60);
+      s = Math.floor( x % 60);
+      
+      
+      if (x < 0) {
+        clearInterval(x);
+        document.getElementById("text").innerHTML = "TIME UP!";
+        // alert('Time Up');
+      }
+      else{
+        document.getElementById('text').innerHTML = 'Time Left   '+ ":" + h + ":"+ m + ":" + s ;
+      }
+    },1000);
+    
+
+    
   </script>
