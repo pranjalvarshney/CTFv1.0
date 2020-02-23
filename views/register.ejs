@@ -5,21 +5,21 @@
                 <h2 class="text-center">Register</h2>
                 <% include ./partials/messages %>
                 <form action="/user/register" method="POST">
-                    <div class="form-group">
+                    <div class="form-group ">
                         <label for="name">Name</label>
-                        <input type="text" name="name" id="name" class="form-control" placeholder="Your name" value="<%= typeof name != 'undefined' ? name : '' %>" required/>
+                        <input type="text" name="name" id="name" class="form-control form-control-sm" placeholder="Your name" value="<%= typeof name != 'undefined' ? name : '' %>" required/>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group ">
                         <label for="rollno">Rollno</label>
-                        <input type="text" name="rollno" id="rollno" class="form-control" placeholder="Your Roll No." value="<%= typeof rollno != 'undefined' ? rollno : '' %>" required/>
+                        <input type="text" name="rollno" id="rollno" class="form-control form-control-sm" placeholder="Your Roll No." value="<%= typeof rollno != 'undefined' ? rollno : '' %>" required/>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group ">
                         <label for="email">Email</label> 
-                        <input type="email" name="email" id="email" class="form-control" placeholder="Your email" value="<%= typeof email != 'undefined' ? email : '' %>" required/>
+                        <input type="email" name="email" id="email" class="form-control form-control-sm" placeholder="Your email" value="<%= typeof email != 'undefined' ? email : '' %>" required/>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group ">
                         <label for="password">Create Password</label>
-                        <input type="password" name="password" id="password" class="form-control" placeholder="Create your password" value="<%= typeof password != 'undefined' ? password : '' %>" required/>
+                        <input type="password" name="password" id="password" class="form-control form-control-sm" placeholder="Create your password" value="<%= typeof password != 'undefined' ? password : '' %>" required/>
                     </div>
                     <button type="submit" class="btn btn-danger w-100">Submit</button>
                     <p class="mt-3">Have an account? <span class="text-danger"><a href="/user/login">Login</a></span></p>
