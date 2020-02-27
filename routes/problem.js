@@ -80,19 +80,19 @@ router.post('/pikachu2',ensureAuthenticated,(req,res)=>{
 				if( req.user.time>=  9000000-900000)
 				{
 					req.user.points += 100;
-					req.user.level3=true;
+					req.user.level2=true;
 					req.user.save()
 					res.redirect('/success')
 				}
 				else if( req.user.time< 90000000-1200000 && req.user.time>= 9000000-2700000){
 					req.user.points += (100-((9000000-req.user.time)/30000));
-					req.user.level3=true;
+					req.user.level2=true;
 					req.user.save()
 					res.redirect('/success')
 				}
 				else{
 					req.user.points += 30;
-					req.user.level3=true;
+					req.user.level2=true;
 					req.user.save()
 					res.redirect('/success')	
 				}
@@ -144,7 +144,7 @@ router.get('/pikachu4', ensureAuthenticated, (req, res) => res.render('pikachu4'
 router.post('/pikachu4',ensureAuthenticated,(req,res)=>{
 	if( req.user.time > 0){
 		if(req.user.level4 == false){
-			if(req.body.password == 'ctf{F1APY0URHAND5}'){
+			if(req.body.password == 'ctf{C1APY0URHAND5}'){
 				if( req.user.time>=  9000000-1500000)
 				{
 					req.user.points += 100;
@@ -245,24 +245,24 @@ router.post('/pikachu6',ensureAuthenticated,(req,res)=>{
 router.get('/pikachu7', ensureAuthenticated, (req, res) => res.render('pikachu7',{user: req.user}));
 router.post('/pikachu7',ensureAuthenticated,(req,res)=>{
 	if( req.user.time > 0){
-		if(req.user.level6 == false){
+		if(req.user.level7 == false){
 			if(req.body.password == 'password123'){
 				if( req.user.time>=  9000000-2400000)
 				{
 					req.user.points += 100;
-					req.user.level6=true;
+					req.user.level7=true;
 					req.user.save()
 					res.redirect('/success')
 				}
 				else if( req.user.time< 90000000-300000 && req.user.time>= 9000000-4200000){
 					req.user.points += (100-((9000000-req.user.time)/30000));
-					req.user.level6=true;
+					req.user.level7=true;
 					req.user.save()
 					res.redirect('/success')
 				}
 				else{
 					req.user.points += 30;
-					req.user.level6=true;
+					req.user.level7=true;
 					req.user.save()
 					res.redirect('/success')	
 				}

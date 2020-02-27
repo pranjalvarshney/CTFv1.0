@@ -42,7 +42,17 @@ const UserSchema = new mongoose.Schema({
         type: Boolean,
         default:false
     },
-     level5:
+    level5:
+    {
+        type: Boolean,
+        default:false
+    }, 
+    level6:
+    {
+        type: Boolean,
+        default:false
+    }, 
+    level7:
     {
         type: Boolean,
         default:false
