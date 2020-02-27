@@ -66,6 +66,7 @@ router.get('/problems', ensureAuthenticated, (req, res) =>{
     timer.start();
     if(req.user.timer == 0){
       timer.stop();
+      res.redirect('timeup',{user:req.user});
     }
     timer.onTime(function(time){
       update_timer(time.ms)

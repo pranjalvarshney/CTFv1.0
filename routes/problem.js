@@ -35,7 +35,7 @@ router.post('/pikachu0',ensureAuthenticated,(req,res)=>{
 			res.redirect('/solved');
 		}
 	}else{
-
+		res.redirect('/timeup');
 	}
 })
 router.get('/pikachu1', ensureAuthenticated, (req, res) => res.render('pikachu1',{user: req.user}));
@@ -69,7 +69,7 @@ router.post('/pikachu1',ensureAuthenticated,(req,res)=>{
 			res.redirect('/solved');
 		}
 	}else{
-
+		res.redirect('/timeup');
 	}
 })
 router.get('/pikachu2', ensureAuthenticated, (req, res) => res.render('pikachu2',{user: req.user}));
@@ -103,7 +103,7 @@ router.post('/pikachu2',ensureAuthenticated,(req,res)=>{
 			res.redirect('/solved');
 		}
 	}else{
-
+		res.redirect('/timeup');
 	}
 })
 router.get('/pikachu3', ensureAuthenticated, (req, res) => res.render('pikachu3',{user: req.user}));
@@ -137,7 +137,7 @@ router.post('/pikachu3',ensureAuthenticated,(req,res)=>{
 			res.redirect('/solved');
 		}
 	}else{
-
+		res.redirect('/timeup');
 	}
 })
 router.get('/pikachu4', ensureAuthenticated, (req, res) => res.render('pikachu4',{user: req.user}));
@@ -171,7 +171,7 @@ router.post('/pikachu4',ensureAuthenticated,(req,res)=>{
 			res.redirect('/solved');
 		}
 	}else{
-
+		res.redirect('/timeup');
 	}
 })
 router.get('/pikachu5', ensureAuthenticated, (req, res) => res.render('pikachu5',{user: req.user}));
@@ -205,7 +205,7 @@ router.post('/pikachu5',ensureAuthenticated,(req,res)=>{
 			res.redirect('/solved');
 		}
 	}else{
-
+		res.redirect('/timeup');
 	}
 })
 router.get('/pikachu6', ensureAuthenticated, (req, res) => res.render('pikachu6',{user: req.user}));
@@ -239,7 +239,7 @@ router.post('/pikachu6',ensureAuthenticated,(req,res)=>{
 			res.redirect('/solved');
 		}
 	}else{
-
+		res.redirect('/timeup');
 	}
 })
 module.exports = router;
