@@ -1,3 +1,5 @@
 module.exports = {
-    MongoURI: 'mongodb+srv://db123:db123@cluster0-fb3y2.mongodb.net/test?retryWrites=true&w=majority'
+    MongoURI: 'mongodb+srv://username:password@cluster0-fb3y2.mongodb.net/test?retryWrites=true&w=majority'
 };
+
+// enter your username and password for mongo Atlas
